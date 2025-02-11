@@ -13,9 +13,70 @@ body{
     height: 100vh;
     width: max(80%, 800px) ;
     margin: 0 auto;  
+    padding: 2rem;
+}
+h2{
+    text-align: center;
+    font-size: 2rem;
 }
 
 .container{
     display: flex;
     height: 100%;
+}
+
+.inputs-container{
+    display: flex;
+    gap: 2rem;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.3rem;
+}
+
+input{
+    border: 0.1rem solid rgb(77, 74, 74);
+    border-radius: 0.4rem;
+    height: 2rem;
+    padding: 0.5rem;
+}
+
+.submit-area{
+    margin: 0.5rem auto;   
+    & > button{
+        padding: 0.3rem;
+        min-width: 5rem;
+        font-size: 1rem;
+        font-weight: 700;
+        color: aliceblue;
+        background-color: #0a57e7;
+        border: 1px transparent;
+        border-radius: .5rem;
+    }
+}
+
+label[for="remember"]{
+    font-size: 1.3rem;
+}
+.sign-in-label{
+    font-size: 1.6rem;
+    text-align: center;
+}
+.sign-in-option{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    flex: 1;
+}
+.sign-in-option > *{
+    width: max(360px, 60%);
+    background-color: #000000be;
+    border: 1rem;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+    color: rgb(255, 255, 255);
+    padding: 0.2rem;
+
 }
