@@ -6,6 +6,9 @@
     margin: 0;
     padding: 0;
     line-height: 1.5;
+    
+}
+:root{
     font-size: 1rem;
 }
 
@@ -20,29 +23,38 @@ h2{
     font-size: 2rem;
 }
 h1{
-    font-size: 1.5rem;
+    font-size: 2rem;
+    color: azure;
+    font-weight: 900;
     text-wrap: nowrap;
+    & ~p{
+        color: azure; 
+        font-weight: 500;
+    }
 }
 
 .container{
     display: flex;
-    /* flex-direction: column; */
-    gap: 2rem;
-    /* border: 2px solid; */
+    gap: 0.5rem;
+    background-color: #d1d0d0d7;
+    border-radius: 1rem;
 }
 
 .container section:first-child{
-    background-image: url('./images/coolbg.avif');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgb(0, 0, 0, 0.6) 80%
+    ) ,url('./images/what.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 1rem;
-    max-width: 70ch;
-
+    max-width: 72ch;
+    border-radius: 1rem;  
 }
 form{
     max-width: 70ch;
-    padding: 0 1rem;
+    padding:1rem;
 }
 .inputs-container{
     display: flex;
@@ -75,27 +87,49 @@ input{
     }
 }
 
-label[for="remember"]{
+label{
     font-size: 1.3rem;
 }
 .sign-in-label{
     font-size: 1.6rem;
     text-align: center;
+    font-weight: 900;
 }
 .sign-in-option{
     display: flex;
     flex-direction: column;
     gap: 1rem;
     align-items: center;
-    flex: 1;
 }
 .sign-in-option > *{
-    width: max(360px, 60%);
+    width: 70%;
     background-color: #000000be;
     border: 1rem;
     border-radius: 1rem;
     font-size: 1.4rem;
     color: rgb(255, 255, 255);
     padding: 0.2rem;
+}
+
+
+@media (max-width: 360px){
+    :root{
+        font-size: 10px;
+    }
+    .container{
+    flex-direction: column;
+    border-radius: 0;
+    }
+    .container section:first-child{
+        height: 10rem;
+        border-radius: 0px 0px 1rem 1rem;
+        }
+    input{
+        max-width: 15rem
+    }
+    body > *{
+        flex: 1;
+    }
+
 
 }
