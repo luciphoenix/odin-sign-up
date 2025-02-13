@@ -112,7 +112,7 @@ label{
 }
 
 
-@media (max-width: 360px){
+@media (max-width: 720px){
     :root{
         font-size: 10px;
     }
@@ -122,13 +122,18 @@ label{
     }
     .container section:first-child{
         height: 10rem;
-        border-radius: 0px 0px 1rem 1rem;
+        border-radius: 0;
+        flex: 1;
+        max-width: initial;
         }
     input{
         max-width: 15rem
     }
     body > *{
         flex: 1;
+    }
+    .container section:last-child{
+        align-self: center;
     }
 
 
