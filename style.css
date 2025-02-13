@@ -1,3 +1,10 @@
+@font-face {
+    font-family: "nord";
+    src: url("./fonts/norse-bold-webfont.woff2") format("woff2");
+    src: url("./fonts/norse-bold-webfont.woff") format("woff");
+
+}
+
 *,*::before,*::after{
     box-sizing: border-box;
 }
@@ -23,6 +30,7 @@ h2{
     font-size: 2rem;
 }
 h1{
+    font-family: "nord";
     font-size: 2rem;
     color: azure;
     font-weight: 900;
@@ -51,6 +59,14 @@ h1{
     padding: 1rem;
     max-width: 72ch;
     border-radius: 1rem;  
+    position: relative;
+}
+
+.copy{
+    position: absolute;
+    bottom: 5px;
+    color: rgb(219, 217, 236);
+    right: 5px;
 }
 form{
     max-width: 70ch;
